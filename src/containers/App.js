@@ -1,22 +1,32 @@
-// import ListContacts from './ListContacts'
-// import CreateContact from './CreateContact'
-// import * as ContactsAPI from './utils/ContactsAPI'
+// App.js
 
+// Main React Files
 
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import * as BooksAPI from './utils/BooksAPI'
+
+// Imported Components
+// import Header from './Header'
+// import Library from './Library'
+// import SearchButton from './SearchButton'
+// import Footer from './Footer'
+
+// Imported Styling
 import './App.css'
+
+// Imported Misc
+import * as BooksAPI from './utils/BooksAPI'
+
+
+<Header />
+<Header />
+<Bookshelf />
+<Footer />
+
 
 class BooksApp extends React.Component {
   state = {
-    /**
-     * TODO: Instead of using this state variable to keep track of which page
-     * we're on, use the URL in the browser's address bar. This will ensure that
-     * users can use the browser's back and forward buttons to navigate between
-     * pages, as well as provide a good URL they can bookmark and share.
-     */
-    showSearchPage: false
+      showSearchPage: false
   }
 
   render() {
@@ -54,6 +64,9 @@ class BooksApp extends React.Component {
                   <h2 className="bookshelf-title">Currently Reading</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
+                    
+                    //Book
+                    
                       <li>
                         <div className="book">
                           <div className="book-top">
@@ -72,6 +85,9 @@ class BooksApp extends React.Component {
                           <div className="book-authors">Harper Lee</div>
                         </div>
                       </li>
+                      
+                      //Book
+                      
                       <li>
                         <div className="book">
                           <div className="book-top">
@@ -93,6 +109,9 @@ class BooksApp extends React.Component {
                     </ol>
                   </div>
                 </div>
+                
+                // BookShelf
+                
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
@@ -115,6 +134,10 @@ class BooksApp extends React.Component {
                           <div className="book-authors">David McCullough</div>
                         </div>
                       </li>
+                      
+                      //Book
+                      
+                      
                       <li>
                         <div className="book">
                           <div className="book-top">
@@ -136,6 +159,9 @@ class BooksApp extends React.Component {
                     </ol>
                   </div>
                 </div>
+                
+                //Bookshelf
+                
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Read</h2>
                   <div className="bookshelf-books">
@@ -158,6 +184,10 @@ class BooksApp extends React.Component {
                           <div className="book-authors">J.R.R. Tolkien</div>
                         </div>
                       </li>
+                      
+                      //Book
+                      
+                      
                       <li>
                         <div className="book">
                           <div className="book-top">
@@ -176,6 +206,9 @@ class BooksApp extends React.Component {
                           <div className="book-authors">Seuss</div>
                         </div>
                       </li>
+                      
+                      //Book
+                      
                       <li>
                         <div className="book">
                           <div className="book-top">
@@ -194,11 +227,18 @@ class BooksApp extends React.Component {
                           <div className="book-authors">Mark Twain</div>
                         </div>
                       </li>
+                      
+                      
                     </ol>
+                    
                   </div>
+                  
                 </div>
+                
               </div>
+              
             </div>
+            
             <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>
